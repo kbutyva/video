@@ -4,6 +4,7 @@
  */
 package com.tuvamedia.video.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
@@ -23,6 +24,7 @@ public class Video {
     String name;
     
     @Lob
+    @Column(length = 100000)
     private byte[] data;
 
     public Video(String name, byte[] data) {
